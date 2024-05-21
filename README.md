@@ -2,8 +2,11 @@
 
 # Yao_et_al_2024_ERL
 **Water Regulation Influence on Hydrological Drought Characteristics in Texas**  
+  
 Lili Yao<sup>1*</sup>, Stephen B Ferencz<sup>1</sup>, Ning Sun<sup>1</sup>, Hongxiang Yan<sup>1</sup>  
+  
 <sup>1</sup> Pacific Northwest National Laboratory, Richland, WA., USA  
+  
 <sup>*</sup> corresponding author: lili.yao@pnnl.gov
 
 ## Purpose
