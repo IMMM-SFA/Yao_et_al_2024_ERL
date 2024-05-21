@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/265254045.svg)](https://zenodo.org/doi/10.5281/zenodo.10442485)
 
-# metarepo
+# Yao_et_al_2024_ERL
 Template repository for a single point of access meta-repository to reproduce an experiment
 
 ## Purpose
