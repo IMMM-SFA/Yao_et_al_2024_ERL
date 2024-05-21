@@ -1,7 +1,10 @@
 [![DOI](https://zenodo.org/badge/265254045.svg)](https://zenodo.org/doi/10.5281/zenodo.10442485)
 
 # Yao_et_al_2024_ERL
-Template repository for a single point of access meta-repository to reproduce an experiment
+Water Regulation Influence on Hydrological Drought Characteristics in Texas
+Lili Yao^1*^, Stephen B Ferencz^1^, Ning Sun^1^, Hongxiang Yan^1^
+^1^ Pacific Northwest National Laboratory, Richland, WA., USA
+^1^ corresponding author: lili.yao@pnnl.gov
 
 ## Purpose
 A meta-repository creates a single point of access for someone to find all of the components that were used to create a published work for the purpose of reproducibility.  This repository should contain references to all minted data and software as well as house any ancillary code used to transform the source data, create figures for your publication, conduct the experiment, and / or execute the contributing software.
