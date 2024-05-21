@@ -1,9 +1,9 @@
 [![DOI](https://zenodo.org/badge/265254045.svg)](https://zenodo.org/doi/10.5281/zenodo.10442485)
 
 # Yao_et_al_2024_ERL
-**Water Regulation Influence on Hydrological Drought Characteristics in Texas**
-Lili Yao<sup>1*</sup>, Stephen B Ferencz<sup>1</sup>, Ning Sun<sup>1</sup>, Hongxiang Yan<sup>1</sup>
-<sup>1</sup> Pacific Northwest National Laboratory, Richland, WA., USA
+**Water Regulation Influence on Hydrological Drought Characteristics in Texas**  
+Lili Yao<sup>1*</sup>, Stephen B Ferencz<sup>1</sup>, Ning Sun<sup>1</sup>, Hongxiang Yan<sup>1</sup>  
+<sup>1</sup> Pacific Northwest National Laboratory, Richland, WA., USA  
 <sup>*</sup> corresponding author: lili.yao@pnnl.gov
 
 ## Purpose
