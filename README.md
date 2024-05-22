@@ -20,8 +20,8 @@ Yao, L., Ferencz, SB., Sun, N., Yan, H. (2024) Environmental Research Letters [p
 1.Precipitation data from Texas Water Development Board
    * Retrived from the Texas Water Development Board (TWDB) datasets https://waterdatafortexas.org/lake-evaporation-rainfall on March 15, 2024 by author
      
-2. Observed streamflow data from USGS
-   * Retrived from the National Water Information System (NWIS) using a python package, i.e., dataretrieval, https://github.com/DOI-USGS/dataretrieval-python?tab=readme-ov-file
+2. Observed streamflow data from USGS National Water Information System (NWIS)
+   * Retrived using a python package, i.e., dataretrieval, https://github.com/DOI-USGS/dataretrieval-python?tab=readme-ov-file
      
 3. Naturalized streamflow data from WRAP basin model
    * Retrived from https://www.tceq.texas.gov/permitting/water_rights/wr_technical-resources/wam.html for the FLO file.
@@ -37,6 +37,9 @@ Yao, L., Ferencz, SB., Sun, N., Yan, H. (2024) Environmental Research Letters [p
    
 10. The location of the major reservoirs from Texas Water Development Board
     * Retrieved from https://www.twdb.texas.gov/mapping/gisdata.asp
+      
+11. The boundary of the Texas from Texas Department of Transportation
+    * Retrived from https://gis-txdot.opendata.arcgis.com/datasets/TXDOT::texas-state-boundary/explore?location=30.834886%2C-100.077018%2C6.08
 
 ### Output data
 Output data for each drought characteristics in the Drought_results.zip
@@ -45,7 +48,7 @@ Output data for each drought characteristics in the Drought_results.zip
 ## Reproduce my experiment
 1. Download inputs noted in Boundary_conditions.zip
 2. Run Area_Weighted_Precipitation.py to get the area weighted monthly precipitation for each gauge.
-3. Run Observed_Q_USGS.py to extract the observed flow from USGS for each gauge.
+3. Run Observed_Q_USGS.py to extract the observed flow from USGS.
 4. Run Natural_Q_WRAP.py to extract the naturalized flow from FLO file from WRAP models.
 5. Run Standardized_Streamflow_Index.py to calculate the 1-month standardized streamflow index for regualted flow and natual flow at the monthly scale.
 6. Run M-H_Response_Time.py to calcualte the meteorological-hydrological drought response time.
@@ -55,6 +58,6 @@ Output data for each drought characteristics in the Drought_results.zip
 10. Merge all the outputs into one .csv file (plot.csv), and use plotting scripts to plot outputs.  
 
 ## Reproduce my figures 
-Use the .py scripts '#.py' to generate figures for ##. These scripts use processed output provided in #.zip.
+Use Fig_#.py to generate Fig. 1 to Fig. 7.
 
 
