@@ -47,7 +47,7 @@ Output data for each drought characteristics in the Drought_results.zip
 
 ## Reproduce my experiment
 1. Download inputs noted in Boundary_conditions.zip
-2. The Observed_Q, Naturalized_Q, and Precipitation folders contain the observed streamflow, naturalized flow, and precipitation data, respectively. To facilitate data processing, the data for each gauge in the same river basin are saved in folders named after the river under each of the Observed_Q, Naturalized_Q, and Precipitation folders. The gauge name list for each river can be found in these river folders. The streamflow gauges in the WRAP FLO file do not appear as USGS gauge numbers; instead, they have ID numbers in the WRAP model. The mapping between the WRAP gauge IDs and the USGS gauge numbers is saved in the gauge name list.
+2. The Observed_Q, Naturalized_Q, and Precipitation folders contain the observed streamflow, naturalized flow, and precipitation data, respectively. To facilitate data processing, the data for each gauge in the same river basin are saved in folders named after the river under each of the Observed_Q, Naturalized_Q, and Precipitation folders. The gauge name list for each river can be found in these river folders. The streamflow gauges in the WRAP FLO file do not appear as USGS gauge numbers; instead, they have ID numbers in the WRAP model. The mapping between the WRAP gauge IDs and the USGS gauge numbers is saved in the gauge name list file.
 3. Run Area_Weighted_Precipitation.py to get the area weighted monthly precipitation for each gauge.
 4. Run Observed_Q_USGS.py to extract the observed flow from USGS.
 5. Run Natural_Q_WRAP.py to extract the naturalized flow from FLO file from WRAP models.
