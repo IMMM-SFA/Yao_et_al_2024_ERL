@@ -46,17 +46,19 @@ Output data for each drought characteristics in the Drought_results.zip
 
 
 ## Reproduce my experiment
-1. Download inputs noted in Boundary_conditions.zip
-2. The Observed_Q, Naturalized_Q, and Precipitation folders contain the observed streamflow, naturalized flow, and precipitation data, respectively. To facilitate data processing, the data for each gauge in the same river basin are saved in folders named after the river under each of the Observed_Q, Naturalized_Q, and Precipitation folders. The gauge name list for each river can be found in these river folders. The streamflow gauges in the WRAP FLO file do not appear as USGS gauge numbers; instead, they have ID numbers in the WRAP model. The mapping between the WRAP gauge IDs and the USGS gauge numbers is saved in the gauge name list file.
-3. Run Area_Weighted_Precipitation.py to get the area weighted monthly precipitation for each gauge.
-4. Run Observed_Q_USGS.py to extract the observed flow from USGS.
-5. Run Natural_Q_WRAP.py to extract the naturalized flow from FLO file from WRAP models.
-6. Run Standardized_Streamflow_Index.py to calculate the 1-month standardized streamflow index for regualted flow and natual flow at the monthly scale.
-7. Run M-H_Response_Time.py to calcualte the meteorological-hydrological drought response time.
-8. Run M-H_Propagation_Rate.py to calculate the meteorological-hydrological drought propagation rate.
-9. Run Meteorological_Drought.py to identify meteorological drought events.
-10. Run Hydrological_Drought.py to identify hydrological drought events, and extract the drought characteristics.
-11. Merge all the outputs into one .csv file (plot.csv), and use plotting scripts to plot outputs.  
+1. Download 'Observed_Q.zip', 'Naturalized_Q.zip', and 'Precipitation.zip' folders for the input data, and download the 'Plot.zip' for the output data which including all the GIS files for plotting.
+2. The 'Observed_Q', 'Naturalized_Q', and 'Precipitation' folders are used for saving and processing the observed streamflow, naturalized flow, and precipitation data, respectively. To facilitate data processing, the data for each gauge in the same river basin are saved in folders named after the river within each of the 'Observed_Q', 'Naturalized_Q', and 'Precipitation' folders. The gauge name list for each river can be found in these river folders. The streamflow gauges in the WRAP FLO file do not appear as USGS gauge numbers; instead, they have ID numbers in the WRAP model. The mapping between the WRAP gauge IDs and the USGS gauge numbers is saved in the gauge name list file.
+3. Run 'Observed_Q_USGS.py' to extract observed flow from USGS. 
+5. The original FLO file from WRAP model were saved in 'FLO' under the 'Naturalized_Q'. Run 'Natural_Q_WRAP.py' to extract the naturalized flow from FLO file and save in csv format. To facilit data processing, the naturalized Q for each gauge was then saved in separate csv file in the river folder under 'Naturalized_Q'.
+6. The origial monthly precipitation data from TWDB was saved in 'all_quads_precipitation_inch.csv' under 'Precipitation'. The area coverage of the gauge's drainage within each quadrangle is saved after the gauge number in each river folder under 'Precipitation'. Run 'Area_Weighted_Precipitation.py' to get the area weighted monthly precipitation for each gauge.
+9. Run 'Standardized_Streamflow_Index.py' to calculate the 1-month standardized streamflow index for regualted flow and natual flow at the monthly scale.
+10. Run 'M-H_Response_Time.py' to calcualte the meteorological-hydrological drought response time.
+11. Run 'M-H_Propagation_Rate.py' to calculate the meteorological-hydrological drought propagation rate.
+12. Run 'Meteorological_Drought.py' to identify meteorological drought events.
+13. Run 'Hydrological_Drought.py' to identify hydrological drought events, and extract the drought characteristics.
+15. Merge all the outputs into one .csv file ('plot.csv') and save in the 'Plot' folder
+16. The Texas state boundary, Texas-Gulf basin boundary, river mainstems, reservoir, and gauge station shapefiles are saved in the 'Plot' folder.
+17. Use the plotting scripts to plot outputs.
 
 ## Reproduce my figures 
 Use Fig_#.py to generate Fig. 1 to Fig. 7.
