@@ -32,12 +32,13 @@ Output data for each drought characteristics in the Drought_results.zip
 ## Reproduce my experiment
 1. Download inputs noted in Boundary_conditions.zip
 2. Run Area_Weighted_Precipitation.py to get the area weighted monthly precipitation for each gauge.
-3. Run Standardized_Streamflow_Index.py to calculate the 1-month standardized streamflow index for regualted flow and natual flow at the monthly scale.
-4. Run M-H_Response_Time.py to calcualte the meteorological-hydrological drought response time.
-5. Run M-H_Propagation_Rate.py to calculate the meteorological-hydrological drought propagation rate.
-6. Run Meteorological_Drought.py to identify meteorological drought events.
-7. Run Hydrological_Drought.py to identify hydrological drought events, and extract the drought characteristics.
-8. Merge all the outputs into one .csv file (plot.csv), and use plotting scripts to plot outputs.  
+3. Run USGS_ObsQ.py to extract the observed flow from USGS for each gauge.
+4. Run Standardized_Streamflow_Index.py to calculate the 1-month standardized streamflow index for regualted flow and natual flow at the monthly scale.
+5. Run M-H_Response_Time.py to calcualte the meteorological-hydrological drought response time.
+6. Run M-H_Propagation_Rate.py to calculate the meteorological-hydrological drought propagation rate.
+7. Run Meteorological_Drought.py to identify meteorological drought events.
+8. Run Hydrological_Drought.py to identify hydrological drought events, and extract the drought characteristics.
+9. Merge all the outputs into one .csv file (plot.csv), and use plotting scripts to plot outputs.  
 
 ## Reproduce my figures 
 Use the .py scripts '#.py' to generate figures for ##. These scripts use processed output provided in #.zip.
