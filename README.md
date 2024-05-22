@@ -20,8 +20,8 @@ Yao, L., Ferencz, SB., Sun, N., Yan, H. (2024) Environmental Research Letters [p
 
 1. Observed streamflow data from USGS
    * Retrived from the National Water Information System (NWIS) using a python package, i.e., dataretrieval, https://github.com/DOI-USGS/dataretrieval-python?tab=readme-ov-file
-3. Naturalized streamflow data from WAM
-   * Retrived from WAMs........... 
+3. Naturalized streamflow data from WRAP basin model
+   * Retrived from https://www.tceq.texas.gov/permitting/water_rights/wr_technical-resources/wam.html for the FLO file.
 5. Precipitation data from Texas Water Development Board
    * Retrived from the Texas Water Development Board (TWDB) datasets https://waterdatafortexas.org/lake-evaporation-rainfall on March 22, 2024 by author
 
@@ -32,12 +32,12 @@ Output data for each drought characteristics in the Drought_results.zip
 ## Reproduce my experiment
 1. Download inputs noted in Boundary_conditions.zip
 2. Run Area_Weighted_Precipitation.py to get the area weighted monthly precipitation for each gauge.
-3. Run Standardized_Streamflow_Index.py to calculate the 1-month standardized streamflow index for regualted flow and natual flow.
+3. Run Standardized_Streamflow_Index.py to calculate the 1-month standardized streamflow index for regualted flow and natual flow at the monthly scale.
 4. Run M-H_Response_Time.py to calcualte the meteorological-hydrological drought response time.
 5. Run M-H_Propagation_Rate.py to calculate the meteorological-hydrological drought propagation rate.
 6. Run Meteorological_Drought.py to identify meteorological drought events.
 7. Run Hydrological_Drought.py to identify hydrological drought events, and extract the drought characteristics.
-8. Use plotting scripts to plot outputs.  
+8. Merge all the outputs into one .csv file (plot.csv), and use plotting scripts to plot outputs.  
 
 ## Reproduce my figures 
 Use the .py scripts '#.py' to generate figures for ##. These scripts use processed output provided in #.zip.
