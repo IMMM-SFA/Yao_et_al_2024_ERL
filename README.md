@@ -47,15 +47,16 @@ Output data for each drought characteristics in the Drought_results.zip
 
 ## Reproduce my experiment
 1. Download inputs noted in Boundary_conditions.zip
-2. Run Area_Weighted_Precipitation.py to get the area weighted monthly precipitation for each gauge.
-3. Run Observed_Q_USGS.py to extract the observed flow from USGS.
-4. Run Natural_Q_WRAP.py to extract the naturalized flow from FLO file from WRAP models.
-5. Run Standardized_Streamflow_Index.py to calculate the 1-month standardized streamflow index for regualted flow and natual flow at the monthly scale.
-6. Run M-H_Response_Time.py to calcualte the meteorological-hydrological drought response time.
-7. Run M-H_Propagation_Rate.py to calculate the meteorological-hydrological drought propagation rate.
-8. Run Meteorological_Drought.py to identify meteorological drought events.
-9. Run Hydrological_Drought.py to identify hydrological drought events, and extract the drought characteristics.
-10. Merge all the outputs into one .csv file (plot.csv), and use plotting scripts to plot outputs.  
+2. The Observed_Q, Naturalized_Q, and Precipitation folders contain the observed streamflow, naturalized flow, and precipitation data, respectively. To facilitate data processing, the data for each gauge in the same river basin are saved in folders named after the river under each of the Observed_Q, Naturalized_Q, and Precipitation folders. The gauge name list for each river can be found in these river folders. The stramflow gauge in WRAP FLO file does not appear as the USGS gauge number, instead they have ID number in the WRAP model. The mapping between the WRAP gauge ID and the USGS gauge number are saved the gauge name list. 
+3. Run Area_Weighted_Precipitation.py to get the area weighted monthly precipitation for each gauge.
+4. Run Observed_Q_USGS.py to extract the observed flow from USGS.
+5. Run Natural_Q_WRAP.py to extract the naturalized flow from FLO file from WRAP models.
+6. Run Standardized_Streamflow_Index.py to calculate the 1-month standardized streamflow index for regualted flow and natual flow at the monthly scale.
+7. Run M-H_Response_Time.py to calcualte the meteorological-hydrological drought response time.
+8. Run M-H_Propagation_Rate.py to calculate the meteorological-hydrological drought propagation rate.
+9. Run Meteorological_Drought.py to identify meteorological drought events.
+10. Run Hydrological_Drought.py to identify hydrological drought events, and extract the drought characteristics.
+11. Merge all the outputs into one .csv file (plot.csv), and use plotting scripts to plot outputs.  
 
 ## Reproduce my figures 
 Use Fig_#.py to generate Fig. 1 to Fig. 7.
