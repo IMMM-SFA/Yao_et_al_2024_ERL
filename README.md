@@ -17,12 +17,12 @@ Yao, L., Ferencz, SB., Sun, N., Yan, H. (2024) Environmental Research Letters [p
 
 ## Data reference  
 ### Input data  
-1.Precipitation data from Texas Water Development Board
+1. Precipitation data from Texas Water Development Board
    * Retrived from the Texas Water Development Board (TWDB) datasets https://waterdatafortexas.org/lake-evaporation-rainfall on March 15, 2024 by author
 
 2. Observed streamflow data from USGS National Water Information System (NWIS)
    * Retrived using a python package, i.e., dataretrieval, https://github.com/DOI-USGS/dataretrieval-python?tab=readme-ov-file
-     
+    
 3. Naturalized streamflow data from WRAP basin model
    * Retrived from https://www.tceq.texas.gov/permitting/water_rights/wr_technical-resources/wam.html for the FLO file.
 
