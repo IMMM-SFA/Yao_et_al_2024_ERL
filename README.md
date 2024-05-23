@@ -59,7 +59,7 @@ Output data for each drought characteristics in the 'plot.csv' under the 'Plot.z
 11. Run 'M-H_Propagation_Rate.py' to calculate the meteorological-hydrological drought propagation rate.
 12. Run 'Meteorological_Drought.py' to identify meteorological drought events.
 13. Run 'Hydrological_Drought.py' to identify hydrological drought events, and extract the drought characteristics.
-15. Merge all the outputs into one .csv file ('plot.csv') and save in the 'Plot' folder
+15. Merge all the outputs into one csv file ('plot.csv') and save in the 'Plot' folder
 16. The shp file for Texas state boundary, Texas-Gulf basin boundary, river mainstems, reservoirs, and gauge stations were saved in the 'Plot' folder.
 17. Use the plotting scripts to plot outputs.
 
