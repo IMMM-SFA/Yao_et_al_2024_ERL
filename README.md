@@ -64,6 +64,6 @@ Output data for each drought characteristics in the 'plot.csv' under the 'Plot.z
 17. Use the plotting scripts to plot outputs.
 
 ## Reproduce my figures 
-Use Fig_#.py to generate Fig. 1 to Fig. 7.
+Use Fig_#.py from the 'workflow' folder to generate Fig. 1 to Fig. 7.
 
 
