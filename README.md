@@ -38,7 +38,7 @@ Yao, L., Ferencz, SB., Sun, N., Yan, H. (2024) Environmental Research Letters [p
 10. The location of the major reservoirs from Texas Water Development Board GIS dataset
     * Retrieved from https://www.twdb.texas.gov/mapping/gisdata/doc/Existing_Reservoirs.zip
       
-11. The 1 degree by 1 degree state grid from Texas Water Development Board GIS dataset
+11. The 1 degree by 1 degree state grids from Texas Water Development Board GIS dataset
     * Retrieved from https://www.twdb.texas.gov/mapping/gisdata/doc/state_grids.zip
          
 12. The boundary of the Texas from Texas Department of Transportation
