@@ -26,7 +26,7 @@ Yao, L., Ferencz, SB., Sun, N., Yan, H. (2024) Environmental Research Letters [p
 3. Naturalized streamflow data from WRAP basin model
    * Retrived from https://www.tceq.texas.gov/permitting/water_rights/wr_technical-resources/wam.html for the FLO file.
 
-4. Streamflow flowline data from National Hydrography Dataset Plus (NHDPlus) Data
+4. River flowline data from National Hydrography Dataset Plus (NHDPlus) Data
    * Retrived from https://www.epa.gov/waterdata/nhdplus-texas-data-vector-processing-unit-12
 
 6. Streamflow gauge drainage area boundary from Hydro Network-Linked Data Index (NLDI)
