@@ -18,7 +18,7 @@ Yao, L., Ferencz, SB., Sun, N., Yan, H. (2024) Environmental Research Letters [p
 ## Data reference  
 ### Input data  
 1. Precipitation data from Texas Water Development Board
-   * Retrived from the Texas Water Development Board (TWDB) datasets https://waterdatafortexas.org/lake-evaporation-rainfall on March 15, 2024 by author
+   * Retrived from the Texas Water Development Board datasets https://waterdatafortexas.org/lake-evaporation-rainfall
 
 2. Observed streamflow data from USGS National Water Information System (NWIS)
    * Retrived using a python package, i.e., dataretrieval, https://github.com/DOI-USGS/dataretrieval-python?tab=readme-ov-file
@@ -35,17 +35,20 @@ Yao, L., Ferencz, SB., Sun, N., Yan, H. (2024) Environmental Research Letters [p
 8. Texas-Gulf basin (HUC2=12) boundary from the National Map developed by USGS
    * Retrived from https://waterdata.usgs.gov/blog/nldi-intro/
    
-10. The location of the major reservoirs from Texas Water Development Board
-    * Retrieved from https://www.twdb.texas.gov/mapping/gisdata.asp
+10. The location of the major reservoirs from Texas Water Development Board GIS dataset
+    * Retrieved from https://www.twdb.texas.gov/mapping/gisdata/doc/Existing_Reservoirs.zip
       
-11. The boundary of the Texas from Texas Department of Transportation
+11. The 1 degree by 1 degree state grid from Texas Water Development Board GIS dataset
+    * Retrieved from https://www.twdb.texas.gov/mapping/gisdata/doc/state_grids.zip
+         
+12. The boundary of the Texas from Texas Department of Transportation
     * Retrived from https://gis-txdot.opendata.arcgis.com/datasets/TXDOT::texas-state-boundary/explore?location=30.834886%2C-100.077018%2C6.08
 
 ### Output data
 Output data for each drought characteristics in the 'plot.csv' under the 'Plot.zip'
 
 ## Reproduce my experiment
-1. Download 'Observed_Q.zip', 'Naturalized_Q.zip', and 'Precipitation.zip' folders for the input data, and download the 'Plot.zip' for the output data which including all the GIS files for plotting.
+1. Download 'Observed_Q.zip', 'Naturalized_Q.zip', and 'Precipitation.zip' folders for the input data, and download the 'Plot.zip' for the output data which including the final results of this study and all the GIS files for plotting.
 2. The 'Observed_Q', 'Naturalized_Q', and 'Precipitation' folders are used for saving and processing the observed streamflow, naturalized flow, and precipitation data, respectively. To facilitate data processing, the data for each gauge in the same river basin are saved in folders named after the river within each of the 'Observed_Q', 'Naturalized_Q', and 'Precipitation' folders. The gauge name list for each river can be found in these river folders. The streamflow gauges in the WRAP FLO file do not appear as USGS gauge numbers; instead, they have ID numbers in the WRAP model. The mapping between the WRAP gauge IDs and the USGS gauge numbers is saved in the gauge name list file.
 3. Run 'Observed_Q_USGS.py' to extract observed flow from USGS. 
 5. The original FLO file from WRAP model were saved in 'FLO' under the 'Naturalized_Q'. Run 'Natural_Q_WRAP.py' to extract the naturalized flow from FLO file and save in csv format. To facilit data processing, the naturalized Q for each gauge was then saved in separate csv file in the river folder under 'Naturalized_Q'.
