@@ -1,4 +1,4 @@
-# This script is extract the observed Q from USGS
+# This script is for extracting the observed Q from USGS
 
 # __author__ = 'Lili Yao'
 # __email__  = 'lili.yao@pnnl.gov'
