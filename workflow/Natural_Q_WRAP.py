@@ -1,4 +1,4 @@
-# This script is to identify hydrological drought events, and extract the drought characteristics 
+# This script is to extract naturalized Q from FLO file
 
 # __author__ = 'Stephen B, Ferencz'
 # __email__  = 'stephen.ferencz@pnnl.gov'
