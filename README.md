@@ -42,8 +42,7 @@ Yao, L., Ferencz, SB., Sun, N., Yan, H. (2024) Environmental Research Letters [p
     * Retrived from https://gis-txdot.opendata.arcgis.com/datasets/TXDOT::texas-state-boundary/explore?location=30.834886%2C-100.077018%2C6.08
 
 ### Output data
-Output data for each drought characteristics in the Drought_results.zip
-
+Output data for each drought characteristics in the 'plot.csv' under the 'Plot.zip'
 
 ## Reproduce my experiment
 1. Download 'Observed_Q.zip', 'Naturalized_Q.zip', and 'Precipitation.zip' folders for the input data, and download the 'Plot.zip' for the output data which including all the GIS files for plotting.
