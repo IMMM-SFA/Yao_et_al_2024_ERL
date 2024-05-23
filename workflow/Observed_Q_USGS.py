@@ -1,4 +1,4 @@
-# This script is for calculating the response time of hydrological drought to meteorological drought based on correlation analysis.
+# This script is extract the observed Q from USGS
 
 # __author__ = 'Lili Yao'
 # __email__  = 'lili.yao@pnnl.gov'
