@@ -10,7 +10,7 @@ Lili Yao<sup>1*</sup>, Stephen B Ferencz<sup>1</sup>, Ning Sun<sup>1</sup>, Hong
 <sup>*</sup> corresponding author: lili.yao@pnnl.gov
 
 ## Abstract
-The state of Texas in the United States is highly susceptible to drought. Its major rivers are subject to extensive water management (WM) activities in order to sustain multisectoral water demands, particularly during drought conditions. However, the impact of WM on the propagation dynamics and characteristics of hydrological drought (HD) in Texas remains unclear. To fill this gap, this study quantifies the influence of WM across 32 streamflow gauges along the mainstems of seven major rivers in Texas by comparing a variety of drought metrics under natural and managed conditions. Notably, we leveraged an extensive, observation-based naturalized streamflow dataset constructed by the Texas Water Development Board (TWDB) as a benchmark for natural flow, paired with gauge observations of managed condition. Results indicate that WM significantly reduced HD frequency across all seven rivers and at 81% of the gauges analyzed. Additionally, it increased the response timescale of HD across Texas’ major rivers by a median of 2.5 months. Although WM alleviated the cumulative duration and severity of HD at more than half of the gauges, the average-event duration and severity increased in most locations. Additionally, WM was found to greatly increase the spatial variability of HD characteristics across the region. This study enhances our understanding of the influence of human interventions on HD in Texas.
+The state of Texas in the United States is highly susceptible to drought. Its major rivers are subject to extensive water management (WM) activities in order to sustain multisectoral water demands, particularly during drought conditions. However, the impact of WM on the propagation dynamics and characteristics of hydrological drought (HD) in Texas remains unclear. To fill this gap, this study quantifies the influence of WM across 32 streamflow gauges along the mainstems of seven major rivers in Texas by comparing a variety of drought metrics under natural and managed conditions. Notably, we leveraged an extensive, observation-based naturalized streamflow dataset constructed by the Texas Water Development Board (TWDB) as a benchmark for natural flows, paired with gauge observations of managed conditions. Results indicate that at the multi-decadal scale, WM significantly reduced HD frequency across all seven rivers and at 81% of the gauges analyzed. Additionally, it increased the response timescale of HD across Texas’ major rivers by a median of 2.5 months. Conversely, the average-event duration and severity increased in most locations. Temporal analysis reveals that the WM impact on HD varies seasonally, with attenuation effects during mid-summer and early fall and intensification effects during late winter and spring. Additionally, WM was found to greatly increase the spatial variability of HD characteristics across the region. These findings emphasize the complexity of WM effects on HD and the necessity for nuanced strategies in managing HD under WM influences. 
 
 ## Journal reference
 Yao, L., Ferencz, SB., Sun, N., Yan, H. (2024) Environmental Research Letters [preprint]
@@ -60,10 +60,11 @@ Output data for each drought characteristics saved in the 'plot.csv' under the '
 12. Run 'Meteorological_Drought.py' to identify meteorological drought events.
 13. Run 'Hydrological_Drought.py' to identify hydrological drought events, and extract the drought characteristics.
 15. Merge all the outputs into one csv file ('plot.csv') and save in the 'Plot' folder
-16. The shp file for Texas state boundary, Texas-Gulf basin boundary, river mainstems, reservoirs, and gauge stations were saved in the 'Plot' folder.
-17. Use the plotting scripts to plot outputs.
+16. Run 'Relative_change_monthly_occurrence_severity.py' to calculate the relative change in monthly cumulative drought months and severity between natural and managed conditions. Save the results in 'Monthly_analysis' folder under 'Plot' folder.
+17. The shp file for Texas state boundary, Texas-Gulf basin boundary, river mainstems, reservoirs, and gauge stations were saved in the 'Plot' folder.
+18. Use the plotting scripts to plot outputs.
 
 ## Reproduce my figures 
-Use Fig_#.py from the 'workflow' folder to generate Fig. 1 to Fig. 7.
+Use Fig_#.py from the 'workflow' folder to generate Fig. 1 to Fig. 8.
 
 
