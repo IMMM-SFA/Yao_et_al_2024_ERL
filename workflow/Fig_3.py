@@ -43,3 +43,167 @@ plt.xlabel('Relative change in average monthly Q$_{10}$ (%)', fontsize=15, label
 plt.xticks(fontsize=15)
 plt.yticks(fontsize=15)
 plt.savefig(path + 'Change_prorage_vs_change_Q10_Linear.png',dpi=600,bbox_inches='tight')
+
+########################################################## 08124000 nat ####################################################################################
+data = pd.read_csv('/path/to/plotting/folder/propagation_analysis/08124000_nat.csv')
+events_HD= pd.read_csv('/path/to/plotting/folder/propagation_analysis/08124000_drought_event_SSI1_nat.csv')
+events_MD = pd.read_csv('/path/to/plotting/folder/propagation_analysis/08124000_drought_event_SPI1.csv')
+
+events_HD['start_date'] = pd.to_datetime(events_HD['start_date']).apply(lambda x: x.replace(day=1))
+events_HD['end_date'] = pd.to_datetime(events_HD['end_date']).apply(lambda x: x.replace(day=1))
+events_MD['start_date'] = pd.to_datetime(events_MD['start_date']).apply(lambda x: x.replace(day=1))
+events_MD['end_date'] = pd.to_datetime(events_MD['end_date']).apply(lambda x: x.replace(day=1))
+data['date'] = pd.to_datetime(data['date']).apply(lambda x: x.replace(day=1))
+
+fig, ax = plt.subplots(figsize=(9,3))
+
+data['month_days'] = data['date'].dt.days_in_month
+
+ax.bar(data['date'], data['ssi'], width=data['month_days'], align='edge', color='red', label='H drought', alpha=0.5)
+ax.bar(data['date'], data['spi'], width=data['month_days'], align='edge', color='grey', label='M drought', alpha=0.6)
+
+for _, row in events_HD.iterrows():
+    start, end = row['start_date'], row['end_date']
+    while start <= end:
+        ax.fill_between([start, start + pd.offsets.MonthEnd(0)], [-3, -3], [-2.90, -2.90], color='black', alpha=0.5)
+        start += pd.offsets.MonthBegin(1)
+
+for _, row in events_MD.iterrows():
+    start, end = row['start_date'], row['end_date']
+    while start <= end:
+        ax.fill_between([start, start + pd.offsets.MonthEnd(0)], [-0.6, -0.6], [-0.4, -0.4], color='black', alpha=0.5)
+        start += pd.offsets.MonthBegin(1)
+
+ax.set_ylim(-3, -0.5)
+ax.set_xlim(data['date'].min(), data['date'].max())
+ax.xaxis.set_major_locator(mdates.YearLocator(5))
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
+plt.xticks(rotation=0, fontsize=17)
+plt.yticks(np.arange(-0.5, -3.5, -0.5),fontsize=17)
+plt.ylabel('SPI-1 or SSI-1', fontsize=15)
+plt.title('08124000, Natural condition', fontsize=18, pad=8)
+plt.savefig('08124000_nat_event.png',dpi=600,bbox_inches='tight')
+plt.show()
+
+########################################################## 08124000 gauge ####################################################################################
+
+data = pd.read_csv('/path/to/plotting/folder/propagation_analysis/08124000_gauge.csv')
+events_HD= pd.read_csv('/path/to/plotting/folder/propagation_analysis/08124000_drought_event_SSI1_gauge.csv')
+events_MD = pd.read_csv('/path/to/plotting/folder/propagation_analysis/08124000_drought_event_SPI1.csv')
+events_HD['start_date'] = pd.to_datetime(events_HD['start_date']).apply(lambda x: x.replace(day=1))
+events_HD['end_date'] = pd.to_datetime(events_HD['end_date']).apply(lambda x: x.replace(day=1))
+events_MD['start_date'] = pd.to_datetime(events_MD['start_date']).apply(lambda x: x.replace(day=1))
+events_MD['end_date'] = pd.to_datetime(events_MD['end_date']).apply(lambda x: x.replace(day=1))
+data['date'] = pd.to_datetime(data['date']).apply(lambda x: x.replace(day=1))
+fig, ax = plt.subplots(figsize=(9,3))
+
+data['month_days'] = data['date'].dt.days_in_month
+
+ax.bar(data['date'], data['ssi'], width=data['month_days'], align='edge', color='red', label='H drought', alpha=0.5)
+ax.bar(data['date'], data['spi'], width=data['month_days'], align='edge', color='grey', label='M drought', alpha=0.6)
+
+for _, row in events_HD.iterrows():
+    start, end = row['start_date'], row['end_date']
+    while start <= end:
+        ax.fill_between([start, start + pd.offsets.MonthEnd(0)], [-3, -3], [-2.90, -2.90], color='black', alpha=0.5)
+        start += pd.offsets.MonthBegin(1)
+
+for _, row in events_MD.iterrows():
+    start, end = row['start_date'], row['end_date']
+    while start <= end:
+        ax.fill_between([start, start + pd.offsets.MonthEnd(0)], [-0.6, -0.6], [-0.4, -0.4], color='black', alpha=0.5)
+        start += pd.offsets.MonthBegin(1)
+
+ax.set_ylim(-3, -0.5)
+
+ax.set_xlim(data['date'].min(), data['date'].max())
+ax.xaxis.set_major_locator(mdates.YearLocator(5))
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
+plt.xticks(rotation=0, fontsize=17)
+plt.yticks(np.arange(-0.5, -3.5, -0.5),fontsize=15)
+plt.ylabel('SPI-1 or SSI-1', fontsize=17)
+plt.title('08124000, Managed condition', fontsize=18, pad=8)
+plt.savefig('08124000_gauge_event.png',dpi=600,bbox_inches='tight')
+plt.show()
+
+########################################################## 08211000 nat ####################################################################################
+data = pd.read_csv('/path/to/plotting/folder/propagation_analysis/08211000_nat.csv')
+events_HD= pd.read_csv('/path/to/plotting/folder/propagation_analysis/08211000_drought_event_SSI1_nat.csv')
+events_MD = pd.read_csv('/path/to/plotting/folder/propagation_analysis/08211000_drought_event_SPI2.csv')
+
+events_HD['start_date'] = pd.to_datetime(events_HD['start_date']).apply(lambda x: x.replace(day=1))
+events_HD['end_date'] = pd.to_datetime(events_HD['end_date']).apply(lambda x: x.replace(day=1))
+events_MD['start_date'] = pd.to_datetime(events_MD['start_date']).apply(lambda x: x.replace(day=1))
+events_MD['end_date'] = pd.to_datetime(events_MD['end_date']).apply(lambda x: x.replace(day=1))
+data['date'] = pd.to_datetime(data['date']).apply(lambda x: x.replace(day=1))
+
+fig, ax = plt.subplots(figsize=(9,3))
+
+data['month_days'] = data['date'].dt.days_in_month
+
+ax.bar(data['date'], data['ssi'], width=data['month_days'], align='edge', color='red', label='H drought', alpha=0.5)
+ax.bar(data['date'], data['spi'], width=data['month_days'], align='edge', color='grey', label='M drought', alpha=0.6)
+
+for _, row in events_HD.iterrows():
+    start, end = row['start_date'], row['end_date']
+    while start <= end:
+        ax.fill_between([start, start + pd.offsets.MonthEnd(0)], [-3, -3], [-2.90, -2.90], color='black', alpha=0.5)
+        start += pd.offsets.MonthBegin(1)
+
+for _, row in events_MD.iterrows():
+    start, end = row['start_date'], row['end_date']
+    while start <= end:
+        ax.fill_between([start, start + pd.offsets.MonthEnd(0)], [-0.6, -0.6], [-0.4, -0.4], color='black', alpha=0.5)
+        start += pd.offsets.MonthBegin(1)
+
+ax.set_ylim(-3, -0.5)
+ax.set_xlim(data['date'].min(), data['date'].max())
+ax.xaxis.set_major_locator(mdates.YearLocator(5))
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
+plt.xticks(rotation=0, fontsize=17)
+plt.yticks(np.arange(-0.5, -3.5, -0.5),fontsize=17)
+plt.ylabel('SPI-1 or SSI-1', fontsize=15)
+plt.title('08211000, Natural condition', fontsize=18, pad=8)
+plt.savefig('08211000_nat_event.png',dpi=600,bbox_inches='tight')
+plt.show()
+
+########################################################## 08211000 gauge ####################################################################################
+
+data = pd.read_csv('/path/to/plotting/folder/propagation_analysis/08211000_gauge.csv')
+events_HD= pd.read_csv('/path/to/plotting/folder/propagation_analysis/08211000_drought_event_SSI1_gauge.csv')
+events_MD = pd.read_csv('/path/to/plotting/folder/propagation_analysis/08211000_drought_event_SPI6.csv')
+events_HD['start_date'] = pd.to_datetime(events_HD['start_date']).apply(lambda x: x.replace(day=1))
+events_HD['end_date'] = pd.to_datetime(events_HD['end_date']).apply(lambda x: x.replace(day=1))
+events_MD['start_date'] = pd.to_datetime(events_MD['start_date']).apply(lambda x: x.replace(day=1))
+events_MD['end_date'] = pd.to_datetime(events_MD['end_date']).apply(lambda x: x.replace(day=1))
+data['date'] = pd.to_datetime(data['date']).apply(lambda x: x.replace(day=1))
+fig, ax = plt.subplots(figsize=(9,3))
+
+data['month_days'] = data['date'].dt.days_in_month
+
+ax.bar(data['date'], data['ssi'], width=data['month_days'], align='edge', color='red', label='H drought', alpha=0.5)
+ax.bar(data['date'], data['spi'], width=data['month_days'], align='edge', color='grey', label='M drought', alpha=0.6)
+
+for _, row in events_HD.iterrows():
+    start, end = row['start_date'], row['end_date']
+    while start <= end:
+        ax.fill_between([start, start + pd.offsets.MonthEnd(0)], [-3, -3], [-2.90, -2.90], color='black', alpha=0.5)
+        start += pd.offsets.MonthBegin(1)
+
+for _, row in events_MD.iterrows():
+    start, end = row['start_date'], row['end_date']
+    while start <= end:
+        ax.fill_between([start, start + pd.offsets.MonthEnd(0)], [-0.6, -0.6], [-0.4, -0.4], color='black', alpha=0.5)
+        start += pd.offsets.MonthBegin(1)
+
+ax.set_ylim(-3, -0.5)
+
+ax.set_xlim(data['date'].min(), data['date'].max())
+ax.xaxis.set_major_locator(mdates.YearLocator(5))
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
+plt.xticks(rotation=0, fontsize=17)
+plt.yticks(np.arange(-0.5, -3.5, -0.5),fontsize=15)
+plt.ylabel('SPI-1 or SSI-1', fontsize=17)
+plt.title('08211000, Managed condition', fontsize=18, pad=8)
+plt.savefig('08211000_gauge_event.png',dpi=600,bbox_inches='tight')
+plt.show()
